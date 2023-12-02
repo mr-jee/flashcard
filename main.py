@@ -1,12 +1,77 @@
 from tkinter import *
 from tkinter import messagebox
 import random
-import pandas
+import pandas as pd
 
 PINK = "#FF8F8F"
 YELLOW = "#EEF296"
 DARK_GREEN = "#0b6940"
 LIGHT_GREEN = "#9ADE7B"
+
+
+# --------------------------Insert Section Functionality
+
+def is_duplicate(word):
+    """ Return True and The duplicate word if a word already exists in the csv file.
+    (True/False, word row, index)"""
+    try:
+        dataframe = pd.read_csv("data/english_words.csv")
+    except FileNotFoundError:
+        word = word_entry.get().lower()
+        meaning = meaning_textbox.get("1.0", "end-1c").lower()
+        part_of_speech = part_of_speech_entry.get().lower()
+        remaining_guess = 10
+
+        word_dict = {
+            "word": word,
+            "meaning": meaning,
+            "part_of_speech": part_of_speech,
+            "remaining_guess": remaining_guess,
+        }
+
+        word_df = pd.DataFrame([word_dict])
+        word_df.to_csv("data/english_words.csv", mode='a', index=False)
+        dataframe = pd.read_csv("data/english_words.csv")
+        print(dataframe)
+        return False, dataframe[dataframe.word == word]
+
+    else:
+        # print(word in dataframe.word.values)
+        return word in dataframe.word.values, dataframe[dataframe.word == word]
+
+
+def remove_duplicate(index):
+    """ Get a word and remove the related row in csv."""
+    dataframe = pd.read_csv("data/english_words.csv")
+    dataframe = dataframe.drop(labels=index, axis=0)
+    dataframe.to_csv("data/english_words.csv", index=False)
+    return dataframe
+
+
+def add_to_db():
+    word = word_entry.get().lower()
+    meaning = meaning_textbox.get("1.0", "end-1c").lower()
+    part_of_speech = part_of_speech_entry.get().lower()
+    remaining_guess = 10
+
+    check_duplicate = is_duplicate(word)
+    duplicate_word = check_duplicate[1]
+    word_dict = {
+        "word": word,
+        "meaning": meaning,
+        "part_of_speech": part_of_speech,
+        "remaining_guess": remaining_guess,
+    }
+    if check_duplicate[0]:
+        is_ok = messagebox.askokcancel(title=f"'{word}' already exists!", message="Do you want to replace?")
+        if is_ok:
+            remove_duplicate(duplicate_word.index)
+            word_df = pd.DataFrame([word_dict])
+            word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
+    else:
+        word_df = pd.DataFrame([word_dict])
+        word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
+
 
 # UI ------------------------------
 window = Tk()
@@ -20,7 +85,7 @@ meaning_card_img = PhotoImage(file="images/meaning_card.png")
 card_current_img = canvas.create_image(200, 133, image=word_card_img)
 canvas.config(bg=DARK_GREEN, highlightthickness=0)
 
-card_title = canvas.create_text(190, 50, text="Title:", font=("Arial", 20, "italic"))
+card_part_of_speech = canvas.create_text(190, 50, text="Part of speech:", font=("Arial", 20, "italic"))
 card_main_text = canvas.create_text(190, 150, text="The word", font=("Arial", 40, "bold"))
 canvas.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
 
@@ -30,10 +95,10 @@ i_dont_know_btn.grid(row=1, column=0)
 i_know_btn = Button(text="I know✅", width=16, bg=LIGHT_GREEN, font=("Arial", 15))
 i_know_btn.grid(row=1, column=1)
 
-separator_canvas = Canvas(width=400, height=10)
+separator_canvas = Canvas(width=400, height=3)
 separator_img = PhotoImage(file="images/separator.png")
 separator_canvas.create_image(200, 5, image=separator_img)
-separator_canvas.config(bg=PINK, highlightthickness=0)
+separator_canvas.config(bg=DARK_GREEN, highlightthickness=0)
 separator_canvas.grid(row=2, column=0, columnspan=2, padx=5, pady=15)
 
 # --------------------------------Insert Section
@@ -41,40 +106,28 @@ word_label = Label(text="Word: ")
 word_label.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "bold"))
 word_label.grid(row=3, column=0)
 
+part_of_speech_label = Label(text="Part of speech: ")
+part_of_speech_label.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "bold"), pady=5)
+part_of_speech_label.grid(row=4, column=0)
+
 meaning_label = Label(text="Meaning: ")
 meaning_label.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "bold"))
-meaning_label.grid(row=4, column=0)
+meaning_label.grid(row=5, column=0)
 
-part_of_speech_label = Label(text="Past od speech: ")
-part_of_speech_label.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "bold"))
-part_of_speech_label.grid(row=5, column=0)
 
 word_entry = Entry(width=32)
+word_entry.focus()
 word_entry.grid(row=3, column=1)
 
-meaning_textbox = Text(height=4, width=25)
-meaning_textbox.grid(row=4, column=1, pady=10)
+part_of_speech_entry = Entry(width=32)
+part_of_speech_entry.grid(row=4, column=1, pady=5)
 
-# ----------------Radio BTNs
-radio_state = IntVar()
-noun_radio_btn = Radiobutton(text="Noun", value="noun", variable=radio_state)
-noun_radio_btn.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "italic"))
-noun_radio_btn.grid(row=5, column=1)
+meaning_textbox = Text(height=4, width=24)
+meaning_textbox.grid(row=5, column=1, pady=10)
 
-verb_radio_btn = Radiobutton(text="Verb", value="verb", variable=radio_state)
-verb_radio_btn.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "italic"))
-verb_radio_btn.grid(row=6, column=0)
 
-adj_radio_btn = Radiobutton(text="Adjective", value="adjective", variable=radio_state)
-adj_radio_btn.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "italic"))
-adj_radio_btn.grid(row=6, column=1)
-
-adverb_radio_btn = Radiobutton(text="Adverb", value="adverb", variable=radio_state)
-adverb_radio_btn.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "italic"))
-adverb_radio_btn.grid(row=7, column=0)
-
-add_btn = Button(text="Add to Dictionary ➡", width=23, fg=DARK_GREEN, bg=YELLOW, font=("Arial", 10))
-add_btn.grid(row=7, column=1)
+add_btn = Button(text="Add to Dictionary ➡", width=36, fg=DARK_GREEN, bg=YELLOW, font=("Arial", 15), command=add_to_db)
+add_btn.grid(row=6, column=0, columnspan=2)
 
 window.mainloop()
 
