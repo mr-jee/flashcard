@@ -70,11 +70,6 @@ window.title("FlashCard")
 window.minsize(width=450, height=610)
 window.config(padx=25, pady=25, bg=DARK_GREEN)
 
-# ------------Test
-df2 = pd.read_csv("data/english_words.csv")
-print(len(df2))
-# ------------/Test
-
 canvas = Canvas(width=400, height=266)
 word_card_img = PhotoImage(file="images/word_card.png")
 meaning_card_img = PhotoImage(file="images/meaning_card.png")
