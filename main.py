@@ -7,7 +7,7 @@ PINK = "#FF8F8F"
 YELLOW = "#EEF296"
 DARK_GREEN = "#0b6940"
 LIGHT_GREEN = "#9ADE7B"
-
+current_card = {}
 
 # --------------------------Insert Section Functionality
 
@@ -46,7 +46,7 @@ def add_to_db():
         "word": word,
         "meaning": meaning,
         "part_of_speech": part_of_speech,
-        "remaining_guess": remaining_guess,
+        "remaining_guess": int(remaining_guess),
     }
     if check_duplicate[0]:
         is_ok = messagebox.askokcancel(title=f"'{word}' already exists!", message="Do you want to replace?")
@@ -58,7 +58,7 @@ def add_to_db():
             meaning_textbox.delete("1.0", END)
             part_of_speech_entry.delete(0, END)
             messagebox.showinfo(title="SAVED SUCCESSFULLY!✅",
-                            message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
+                                message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
     else:
         word_df = pd.DataFrame([word_dict])
         word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
@@ -69,26 +69,83 @@ def add_to_db():
                             message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
 
 
+#----------------------FlashCard Section
+try:
+    mydata = pd.read_csv("data/english_words.csv")
+except FileNotFoundError:
+    word_df = pd.DataFrame(columns=["word", "meaning", "part_of_speech", "remaining_guess"])
+    word_df.to_csv("data/english_words.csv", mode='a', index=False)
+    main_data_dict = word_df.to_dict(orient='records')
+    to_learn_dict_temp = word_df.to_dict(orient='records')
+
+else:
+    main_data_dict = mydata.to_dict(orient='records')
+    to_learn_dict_temp = main_data_dict
+
+
+
+def next_card():
+    global current_card, flip_timer
+    window.after_cancel(flip_timer)
+    current_card = random.choice(to_learn_dict_temp)
+    canvas.itemconfig(card_part_of_speech, text="Do you know the meaning of:", fill='black', font=("Arial", 15, "italic"))
+    canvas.itemconfig(card_main_text, text=current_card['word'], fill='black', font=("Arial", 40, "bold"))
+    canvas.itemconfig(card_current_background, image=front_of_card_img)
+    flip_timer = window.after(3000, func=flip_card)
+
+
+def flip_card():
+    canvas.itemconfig(card_part_of_speech, text=f"POS: {current_card['part_of_speech']}", fill=YELLOW, font=("Arial", 18, "bold"))
+    canvas.itemconfig(card_main_text, text=current_card["meaning"], fill='white', font=("Arial", 15))
+    canvas.itemconfig(card_current_background, image=back_of_card_img)
+
+
+
+def i_know():
+    for dict in main_data_dict:
+        if dict["word"] == current_card["word"]:
+            dict["remaining_guess"] -= 1
+            new_data = pd.DataFrame(main_data_dict)
+            new_data.to_csv("data/english_words.csv", index=False)
+    print(len(to_learn_dict_temp), len(main_data_dict))
+    if current_card["remaining_guess"] == 0:
+        to_learn_dict_temp.remove(current_card)
+    next_card()
+
+
+
+
+
+
+
+
+
+
+
+
+
 # UI ------------------------------
 window = Tk()
 window.title("FlashCard")
 window.minsize(width=450, height=610)
 window.config(padx=25, pady=25, bg=DARK_GREEN)
 
+flip_timer = window.after(2000, flip_card)
+
 canvas = Canvas(width=400, height=266)
-word_card_img = PhotoImage(file="images/word_card.png")
-meaning_card_img = PhotoImage(file="images/meaning_card.png")
-card_current_img = canvas.create_image(200, 133, image=word_card_img)
+front_of_card_img = PhotoImage(file="images/word_card.png")
+back_of_card_img = PhotoImage(file="images/meaning_card.png")
+card_current_background = canvas.create_image(200, 133, image=front_of_card_img)
 canvas.config(bg=DARK_GREEN, highlightthickness=0)
 
-card_part_of_speech = canvas.create_text(190, 50, text="Part of speech:", font=("Arial", 20, "italic"))
-card_main_text = canvas.create_text(190, 150, text="The word", font=("Arial", 40, "bold"))
+card_part_of_speech = canvas.create_text(190, 50, text="Do you know the meaning of:", font=("Arial", 15, "italic"))
+card_main_text = canvas.create_text(190, 150, text="The word", font=("Arial", 40, "bold"), anchor=CENTER, width=380)
 canvas.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
 
 # Buttons
-i_dont_know_btn = Button(text="I don't know❌", bg=PINK, fg="white", width=16, font=("Arial", 15))
+i_dont_know_btn = Button(text="I will learn it❌", bg=PINK, fg="white", width=16, font=("Arial", 15), command=next_card)
 i_dont_know_btn.grid(row=1, column=0)
-i_know_btn = Button(text="I know✅", width=16, bg=LIGHT_GREEN, font=("Arial", 15))
+i_know_btn = Button(text="I know it✅", width=16, bg=LIGHT_GREEN, font=("Arial", 15), command=i_know)
 i_know_btn.grid(row=1, column=1)
 
 separator_canvas = Canvas(width=400, height=3)
@@ -122,6 +179,8 @@ meaning_textbox.grid(row=5, column=1, pady=10)
 
 add_btn = Button(text="Add to Dictionary ➡", width=36, fg=DARK_GREEN, bg=YELLOW, font=("Arial", 15), command=add_to_db)
 add_btn.grid(row=6, column=0, columnspan=2)
+
+next_card()
 
 window.mainloop()
 
