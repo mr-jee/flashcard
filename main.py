@@ -15,16 +15,8 @@ current_card = {}
 def is_duplicate(word):
     """ Return True and The duplicate word if a word already exists in the csv file.
     (True/False, word row, index)"""
-    try:
-        dataframe = pd.read_csv("data/english_words.csv")
-    except FileNotFoundError:
-        word_df = pd.DataFrame(columns=["word", "meaning", "part_of_speech", "remaining_guess"])
-        word_df.to_csv("data/english_words.csv", mode='a', index=False)
-        return False, None
-
-    else:
-        # print(word in dataframe.word.values)
-        return word in dataframe.word.values, dataframe[dataframe.word == word]
+    dataframe = pd.read_csv("data/english_words.csv")
+    return word in dataframe.word.values, dataframe[dataframe.word == word]
 
 
 def remove_duplicate(index):
@@ -40,19 +32,29 @@ def add_to_db():
     meaning = meaning_textbox.get("1.0", "end-1c").lower().replace(",", "/").strip()
     part_of_speech = part_of_speech_entry.get().lower().replace(",", "/").strip()
     remaining_guess = 10
-
-    check_duplicate = is_duplicate(word)
-    duplicate_word = check_duplicate[1]
-    word_dict = {
-        "word": word,
-        "meaning": meaning,
-        "part_of_speech": part_of_speech,
-        "remaining_guess": int(remaining_guess),
-    }
-    if check_duplicate[0]:
-        is_ok = messagebox.askokcancel(title=f"'{word}' already exists!", message="Do you want to replace?")
-        if is_ok:
-            remove_duplicate(duplicate_word.index)
+    if len(word) == 0 or len(meaning) == 0 or len(part_of_speech) == 0:
+        messagebox.showwarning(title="Warning", message="Fields should not be empty!")
+    else:
+        check_duplicate = is_duplicate(word)
+        duplicate_word = check_duplicate[1]
+        word_dict = {
+            "word": word,
+            "meaning": meaning,
+            "part_of_speech": part_of_speech,
+            "remaining_guess": int(remaining_guess),
+        }
+        if check_duplicate[0]:
+            is_ok = messagebox.askokcancel(title=f"'{word}' already exists!", message="Do you want to replace?")
+            if is_ok:
+                remove_duplicate(duplicate_word.index)
+                word_df = pd.DataFrame([word_dict])
+                word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
+                word_entry.delete(0, END)
+                meaning_textbox.delete("1.0", END)
+                part_of_speech_entry.delete(0, END)
+                messagebox.showinfo(title="SAVED SUCCESSFULLY!✅",
+                                    message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
+        else:
             word_df = pd.DataFrame([word_dict])
             word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
             word_entry.delete(0, END)
@@ -60,14 +62,6 @@ def add_to_db():
             part_of_speech_entry.delete(0, END)
             messagebox.showinfo(title="SAVED SUCCESSFULLY!✅",
                                 message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
-    else:
-        word_df = pd.DataFrame([word_dict])
-        word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
-        word_entry.delete(0, END)
-        meaning_textbox.delete("1.0", END)
-        part_of_speech_entry.delete(0, END)
-        messagebox.showinfo(title="SAVED SUCCESSFULLY!✅",
-                            message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
 
 
 # ----------------------FlashCard Section-----------------------------------------------------------------
@@ -75,7 +69,7 @@ def add_to_db():
 try:
     mydata = pd.read_csv("data/english_words.csv")
 except FileNotFoundError:
-    word_df = pd.DataFrame(columns=["word", "meaning", "part_of_speech", "remaining_guess"])
+    word_df = pd.DataFrame([{"word":"happy", "meaning":"not sad", "part_of_speech":"adj", "remaining_guess":10}])
     word_df.to_csv("data/english_words.csv", mode='a', index=False)
     main_data_dict = word_df.to_dict(orient='records')
     to_learn_dict_temp = word_df.to_dict(orient='records')
