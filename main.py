@@ -54,6 +54,11 @@ def add_to_db():
             remove_duplicate(duplicate_word.index)
             word_df = pd.DataFrame([word_dict])
             word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
+            word_entry.delete(0, END)
+            meaning_textbox.delete("1.0", END)
+            part_of_speech_entry.delete(0, END)
+            messagebox.showinfo(title="SAVED SUCCESSFULLY!✅",
+                            message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
     else:
         word_df = pd.DataFrame([word_dict])
         word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
