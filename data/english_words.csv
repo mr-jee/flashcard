@@ -1,0 +1,505 @@
+word,part_of_speech,meaning,remaining_guess
+abandon,v,to give up/forsake,10
+abrasive,adj,rough/coarse/harsh,10
+abrupt,adj,sudden/unexpected,10
+abstain,v,to refrain from/avoid,10
+accommodate,v,to make fit/adjust,10
+acknowledge,v,to admit/recognize,10
+acquire,v,to get/obtain,10
+adamant,adj,unyielding/firm in opinion,10
+addict,v,to devote oneself habitually/to be addicted to,10
+adhere,v,to stick/cling,10
+adjacent,adj,next to/adjoining,10
+admonish,v,to warn/reprove,10
+affliction,n,a condition of pain or suffering,10
+aggravate,v,to make worse/intensify,10
+aggregate,n,total/amounting to a whole,10
+ailment,n,a sickness or disorder,10
+akin,adj,related by blood/having similar qualities,10
+allege,v,to assert without proof,10
+alleviate,v,to relieve/ease,10
+allocate,v,to distribute/assign,10
+amass,v,to accumulate/gather together,10
+ambiguous,adj,unclear/having more than one interpretation,10
+ambivalence,n,mixed feelings or emotions,10
+amiable,adj,friendly/good-natured,10
+amplify,v,to make larger or more powerful,10
+anarchy,n,absence of government or authority/chaos,10
+annex,v,to add or attach,10
+anticipate,v,to expect/foresee,10
+apprehend,v,to understand/arrest,10
+arbitrary,adj,based on random choice or personal whim rather than reason,10
+ardent,adj,enthusiastic/passionate,10
+articulate,adj,expressing oneself clearly and effectively,10
+ascend,v,to go upward/rise,10
+assert,v,to state with confidence or force,10
+assess,v,to evaluate/estimate,10
+asset,n,a valuable person or thing,10
+assimilate,v,to absorb/integrate,10
+audacious,adj,bold/daring,10
+augment,v,to increase/enlarge,10
+authentic,adj,genuine/real,10
+avarice,n,extreme greed for wealth or material gain,10
+avid,adj,eager/enthusiastic,10
+awry,adj,off course/twisted to one side,10
+banal,adj,common/lacking originality,10
+belligerent,adj,hostile/aggressive,10
+benevolent,adj,kindly/charitable,10
+benign,adj,gentle/favorable,10
+bizarre,adj,strange/unusual,10
+bleak,adj,desolate/without hope or encouragement,10
+blunder,n,a careless mistake,10
+boisterous,adj,noisy/energetic,10
+bolster,v,to support or strengthen,10
+brevity,n,briefness/conciseness,10
+brusque,adj,blunt/abrupt in manner,10
+buoyant,adj,cheerful/capable of floating,10
+calamity,n,a disaster/event causing great harm,10
+callous,adj,unfeeling/insensitive,10
+candor,n,honesty/openness,10
+capricious,adj,impulsive/unpredictable,10
+castigate,v,to criticize or punish severely,10
+caustic,adj,biting/sarcastic,10
+cease,v,to stop/discontinue,10
+censure,v,to criticize harshly,10
+chagrin,n,embarrassment/disappointment,10
+charisma,n,charm/magnetic appeal,10
+chronicle,n,a record of events in order of time/history,10
+circumspect,adj,cautious/watchful,10
+circumvent,v,to go around/bypass,10
+clandestine,adj,secret/concealed,10
+coerce,v,to force/compel,10
+collaborate,v,to work together,10
+compatible,adj,able to get along or work well together,10
+concise,adj,brief/to the point,10
+concur,v,to agree/be in accord,10
+condone,v,to overlook/forgive,10
+confidant,n,a person entrusted with secrets,10
+conform,v,to comply with rules or standards,10
+congenial,adj,friendly/pleasant,10
+consensus,n,general agreement,10
+conspicuous,adj,easily seen/noticeable,10
+copious,adj,abundant/plentiful,10
+cordial,adj,warm and friendly,10
+corroborate,v,to support with evidence/confirm,10
+criterion,n,a standard or rule by which something is judged,10
+crucial,adj,extremely important/vital,10
+culpable,adj,deserving blame/guilty,10
+cursory,adj,hasty/without attention to detail,10
+curtail,v,to cut short/reduce,10
+cynical,adj,skeptical/distrustful of human sincerity,10
+debilitate,v,to weaken/sap the strength of,10
+debunk,v,to expose as false/ridicule,10
+decimate,v,to destroy a large portion of,10
+defer,v,to postpone/delay,10
+definitive,adj,authoritative/conclusive,10
+defraud,v,to cheat/deceive,10
+degenerate,v,to decline or deteriorate,10
+dejected,adj,depressed/disheartened,10
+deliberate,adj,intentional/done with careful consideration,10
+demeanor,n,behavior/conduct,10
+denounce,v,to condemn openly/accuse,10
+depict,v,to represent/portray,10
+deplete,v,to use up/exhaust,10
+despondent,adj,discouraged/hopeless,10
+destitute,adj,extremely poor/lacking necessities,10
+deteriorate,v,to worsen/decline,10
+devious,adj,cunning/deceitful,10
+devout,adj,deeply religious/sincere,10
+dilemma,n,a difficult choice between two undesirable options,10
+diligent,adj,hardworking/industrious,10
+diminish,v,to make or become smaller/reduce,10
+discern,v,to perceive/recognize,10
+disclose,v,to reveal/make known,10
+disdain,n,scorn/contempt,10
+disgruntled,adj,discontented/resentful,10
+dismantle,v,to take apart/disassemble,10
+disparage,v,to belittle/criticize,10
+disparity,n,a great difference/inequality,10
+distraught,adj,deeply agitated/upset,10
+diverse,adj,varied/different,10
+divulge,v,to reveal/disclose,10
+docile,adj,easily taught/submissive,10
+dormant,adj,inactive/asleep,10
+dubious,adj,doubtful/uncertain,10
+eccentric,adj,unconventional/peculiar,10
+efface,v,to erase/wipe out,10
+elicit,v,to draw out/evoke,10
+elucidate,v,to make clear/explain,10
+elusive,adj,difficult to catch/hard to pin down,10
+embellish,v,to decorate/make more attractive,10
+empathize,v,to understand and share the feelings of another,10
+emulate,v,to imitate/strive to equal or excel,10
+enervate,v,to weaken/drain of energy,10
+enhance,v,to improve/make better,10
+enigma,n,a mystery/something difficult to understand,10
+ephemeral,adj,short-lived/fleeting,10
+epitome,n,a perfect example/embodiment,10
+erratic,adj,unpredictable/inconsistent,10
+erudite,adj,knowledgeable/scholarly,10
+esoteric,adj,known or understood by only a few/mysterious,10
+euphemism,n,a mild or indirect expression substituted for a harsh or direct one,10
+evoke,v,to call forth/summon,10
+exacerbate,v,to make worse/intensify,10
+exalt,v,to praise/elevate,10
+expedite,v,to speed up/hasten,10
+explicit,adj,clear and detailed/straightforward,10
+exploit,v,to use for one's own advantage,10
+extol,v,to praise highly/commend,10
+facilitate,v,to make easier/assist,10
+fallacy,n,a false or mistaken idea,10
+feasible,adj,possible/capable of being done,10
+felicitous,adj,well-suited/appropriate,10
+fervent,adj,passionate/intense,10
+flagrant,adj,shockingly obvious/glaring,10
+fluctuate,v,to vary/change frequently,10
+fortuitous,adj,happening by chance/fortunate,10
+fraudulent,adj,deceitful/dishonest,10
+futile,adj,pointless/ineffective,10
+galvanize,v,to shock or excite/stimulate into action,10
+garner,v,to gather/collect,10
+garrulous,adj,excessively talkative,10
+genial,adj,friendly/cheerful,10
+glean,v,to gather information gradually/extract,10
+gratuitous,adj,given freely/unwarranted,10
+gravity,n,seriousness/importance,10
+guile,n,deceit/cunning,10
+hamper,v,to hinder/obstruct,10
+hapless,adj,unfortunate/unlucky,10
+harangue,n,a lengthy and aggressive speech,10
+harbinger,n,a sign/omen,10
+havoc,n,widespread destruction/chaos,10
+heinous,adj,shockingly evil/abominable,10
+hiatus,n,a gap or interruption in continuity/a break,10
+hindrance,n,an obstacle/something that prevents action,10
+holistic,adj,considering the whole/comprehensive,10
+homogenous,adj,of the same kind or nature/uniform,10
+hypothetical,adj,based on assumptions/supposed,10
+illicit,adj,forbidden/illegal,10
+immerse,v,to involve deeply/absorb,10
+impede,v,to obstruct/hinder,10
+imperative,adj,of vital importance/necessary,10
+impervious,adj,not affected or influenced/immune,10
+implement,v,to put into effect/execute,10
+implicate,v,to involve in/connect with,10
+implore,v,to beg earnestly/plead,10
+inadvertently,adv,unintentionally/by oversight,10
+inane,adj,silly/lacking significance,10
+incapacitate,v,to disable/make unable to function,10
+incessant,adj,never-ending/constant,10
+incite,v,to provoke/stimulate,10
+incongruous,adj,out of place/not in harmony,10
+incorrigible,adj,incapable of being corrected or reformed,10
+incredulous,adj,unwilling or unable to believe/skeptical,10
+indigenous,adj,native to a particular region or environment,10
+indignant,adj,feeling or expressing strong displeasure at something unjust or offensive,10
+induce,v,to bring about or cause,10
+inert,adj,lacking the ability or strength to move/inactive,10
+ingenuity,n,cleverness/resourcefulness,10
+inherent,adj,existing in something as a permanent - essential - or characteristic attribute,10
+inhibit,v,to restrain/prevent,10
+innate,adj,existing from birth/inborn,10
+innocuous,adj,harmless/not likely to cause harm,10
+insatiable,adj,incapable of being satisfied/greedy,10
+insipid,adj,lacking flavor/dull/bland,10
+insurmountable,adj,impossible to overcome,10
+integral,adj,necessary for completeness/essential,10
+intervene,v,to come between/interfere,10
+intricate,adj,complex/detailed,10
+intrinsic,adj,belonging naturally/essential,10
+invincible,adj,unbeatable/unconquerable,10
+irate,adj,very angry/furious,10
+jargon,n,specialized language/technical terminology,10
+jettison,v,to discard/throw overboard,10
+judicious,adj,wise/showing good judgment,10
+juxtapose,v,to place side by side for comparison,10
+keen,adj,sharp/intellectually sharp,10
+kindle,v,to ignite/arouse a feeling or emotion,10
+kinetic,adj,relating to motion/active,10
+laconic,adj,using few words/concise,10
+lament,v,to express sorrow/mourn,10
+lethargic,adj,sluggish/lacking energy,10
+levity,n,lightness of manner or speech/frivolity,10
+listless,adj,lacking energy or enthusiasm/lethargic,10
+lucid,adj,clear/easy to understand,10
+ludicrous,adj,absurd/ridiculous,10
+luminous,adj,bright/emitting light,10
+magnanimous,adj,generous/noble in spirit,10
+malaise,n,a general feeling of discomfort or unease,10
+malevolent,adj,having or showing a wish to do evil,10
+mandate,n,an authoritative command or instruction,10
+meander,v,to wander aimlessly/follow a winding course,10
+meticulous,adj,extremely careful and precise,10
+mitigate,v,to make less severe/alleviate,10
+momentous,adj,of great importance/significant,10
+mundane,adj,ordinary/commonplace,10
+myriad,adj,countless/a very large number,10
+nebulous,adj,unclear/hazy/vague,10
+negate,v,to cancel out/nullify,10
+nepotism,n,favoritism shown to family or friends(especially in business or hiring practices),10
+nocturnal,adj,relating to or occurring during the night,10
+nomadic,adj,wandering/moving from place to place,10
+nostalgia,n,a sentimental longing for the past,10
+notorious,adj,famous for something bad/infamous,10
+novice,n,a beginner/someone new to a field or activity,10
+nuance,n,a subtle difference or distinction,10
+nullify,v,to cancel out/make legally null and void,10
+obdurate,adj,stubborn/resistant to persuasion,10
+obliterate,v,to destroy completely/wipe out,10
+obscure,adj,unclear/not well-known,10
+obstinate,adj,stubborn/refusing to change one's opinion,10
+obtuse,adj,lacking sharpness of intellect/not clear or precise in thought,10
+obviate,v,to prevent/make unnecessary,10
+occult,adj,mysterious/supernatural,10
+odious,adj,extremely unpleasant/hateful,10
+ominous,adj,threatening/indicating future harm,10
+opulent,adj,wealthy/luxurious,10
+oscillate,v,to swing back and forth/vary,10
+ostracize,v,to exclude/banish,10
+palpable,adj,able to be touched or felt/tangible,10
+paradigm,n,a model or example,10
+paradox,n,a seemingly contradictory statement that may be true,10
+paramount,adj,of supreme importance/chief,10
+parsimonious,adj,excessively thrifty/stingy,10
+penchant,n,a strong inclination or liking,10
+perceptive,adj,observant/having insight,10
+pernicious,adj,harmful/destructive,10
+pertinent,adj,relevant/related to the matter at hand,10
+pervasive,adj,widespread/prevalent,10
+phenomenon,n,a remarkable occurrence or fact,10
+philanthropy,n,the desire to promote the welfare of others/charity,10
+placate,v,to appease/soothe,10
+plausible,adj,believable/credible,10
+plethora,n,an excess/abundance,10
+poignant,adj,emotionally moving/touching,10
+precarious,adj,dangerously unstable/risky,10
+precursor,n,a person or thing that comes before and indicates the approach of another,10
+predilection,n,a preference/liking,10
+prelude,n,an introduction/preliminary event or action,10
+presumptuous,adj,excessively forward/taking liberties,10
+prevalent,adj,widespread/common,10
+prodigious,adj,enormous/extraordinary in size or degree,10
+prolific,adj,producing large quantities/fertile,10
+propensity,n,a natural inclination or tendency,10
+protean,adj,versatile/capable of taking on many forms,10
+prudent,adj,wise/cautious,10
+puerile,adj,childish/immature,10
+purloin,v,to steal/take dishonestly,10
+quell,v,to suppress/put an end to,10
+quixotic,adj,extremely idealistic/impractical,10
+ramification,n,a consequence/branching out,10
+rancor,n,bitter resentment or ill-will,10
+rebuke,v,to scold/criticize sharply,10
+recalcitrant,adj,stubbornly resistant to authority or control,10
+recapitulate,v,to summarize/review,10
+recede,v,to move back/withdraw,10
+recluse,n,a person who lives in seclusion/hermit,10
+redundant,adj,exceeding what is necessary/repetitive,10
+relegate,v,to consign to an inferior position/downgrade,10
+relinquish,v,to give up/surrender,10
+remonstrate,v,to argue or plead with someone against something,10
+replete,adj,filled or well-supplied with something,10
+reprehensible,adj,deserving censure or condemnation,10
+reprisal,n,a retaliatory action against an enemy in wartime,10
+resilient,adj,able to recover quickly/flexible,10
+resolute,adj,determined/unwavering,10
+reticent,adj,reserved/silent/not revealing one's thoughts readily,10
+reverent,adj,deeply respectful/showing great esteem,10
+rhapsody,n,an ecstatic expression of feeling or enthusiasm,10
+robust,adj,strong and healthy/vigorous,10
+rogue,n,a dishonest or unprincipled person,10
+sacrosanct,adj,regarded as too important or valuable to be interfered with,10
+sagacious,adj,wise/discerning,10
+salient,adj,most noticeable or important/prominent,10
+sanguine,adj,optimistic/cheerful,10
+sardonic,adj,scornfully mocking or cynical,10
+savor,v,to enjoy or appreciate fully,10
+scrutinize,v,to examine closely and critically,10
+sequester,v,to isolate or hide away/segregate,10
+serendipity,n,the occurrence and development of events by chance in a happy or beneficial way,10
+serene,adj,calm/peaceful,10
+servile,adj,overly submissive/like a servant,10
+shrewd,adj,clever/astute,10
+sinister,adj,giving the impression that something harmful or evil is happening or will happen,10
+skeptical,adj,doubtful/inclined to question or doubt,10
+solicitous,adj,concerned and attentive/eager to help,10
+somber,adj,dark/gloomy/serious and grave,10
+sporadic,adj,occurring at irregular intervals/occasional,10
+staunch,adj,loyal and committed in attitude,10
+steadfast,adj,resolutely or dutifully firm and unwavering,10
+stereotype,n,a widely held but fixed and oversimplified image or idea of a particular type of person or thing,10
+stifle,v,to suppress or hold back,10
+stringent,adj,strict/demanding,10
+subjugate,v,to bring under domination or control(especially by conquest),10
+substantiate,v,to provide evidence to support or prove the truth of,10
+succinct,adj,briefly and clearly expressed,10
+surreptitious,adj,kept secret(especially because it would not be approved of),10
+sustainable,adj,capable of being maintained over the long term without harming the environment,10
+taciturn,adj,reserved or uncommunicative in speech/saying little,10
+tangible,adj,perceptible by touch/clear and definite/real,10
+tantamount,adj,equivalent in value or significance,10
+tenacious,adj,persistent/holding fast to a position or principle,10
+terse,adj,brief and to the point/concise,10
+thwart,v,to prevent someone from accomplishing something,10
+tirade,n,a long and angry speech of criticism or accusation,10
+torpid,adj,mentally or physically inactive/lethargic,10
+trepidation,n,a feeling of fear or agitation about something that may happen,10
+ubiquitous,adj,present/appearing/or found everywhere,10
+unassailable,adj,unable to be attacked or questioned or defeated,10
+undermine,v,to weaken or damage(especially gradually or insidiously),10
+underscore,v,to emphasize/to underline,10
+unequivocal,adj,leaving no doubt/unambiguous,10
+unobtrusive,adj,not attracting attention in a conspicuous way/inconspicuous,10
+unprecedented,adj,never done or known before/unparalleled,10
+unwarranted,adj,unjustified/groundless,10
+urbane,adj,refined in manner/sophisticated,10
+usurp,v,to seize and hold power or position by force or without legal right,10
+vacillate,v,to waver in one's mind or opinions/be indecisive,10
+vehement,adj,showing strong feeling/passionate,10
+veneer,n,a superficial or deceptively attractive appearance,10
+venerate,v,to regard with great respect/revere,10
+verbose,adj,using more words than necessary/long-winded,10
+versatile,adj,able to adapt or be adapted to many different functions or activities,10
+vex,v,to annoy/irritate,10
+vicarious,adj,experienced in the imagination through the feelings or actions of another person,10
+vigilant,adj,watchful/alert to detect danger,10
+vindicate,v,to clear from blame or suspicion/justify,10
+virulent,adj,extremely harmful or poisonous/full of hate,10
+visionary,adj,having the nature of a vision/characterized by idealism,10
+volatile,adj,easily evaporated at normal temperatures/liable to change rapidly and unpredictably,10
+wane,v,to decrease in size or extent or degree/decline,10
+wanton,adj,deliberate and unprovoked/unrestrained or excessive,10
+wary,adj,cautious/watchful,10
+whimsical,adj,playfully quaint or fanciful especially in an appealing and amusing way,10
+wistful,adj,having or showing a feeling of vague or regretful longing,10
+xenophobia,n,a dislike of or prejudice against people from other countries,10
+yoke,v,to join together/unite,10
+zealot,n,a person who is fanatical and uncompromising in pursuit of their religious or political or other ideals,10
+zenith,n,the highest point/culmination,10
+zeal,n,great enthusiasm or passion in pursuit of a cause or an objective,10
+zenith,n,the highest point/culmination,10
+zephyr,n,a gentle/mild breeze,10
+abhor v,to regard with horror or loathing/hate intensely,10
+abrogate v,to repeal or do away with (a law/right or formal agreement),10
+abscond v,to leave hurriedly and secretly (typically to avoid detection or arrest),10
+alacrity n,brisk and cheerful readiness/eagerness,10
+amalgamate v,to combine or unite to form one organization or structure,10
+ambulatory adj,relating to or adapted for walking/capable of walking,10
+ameliorate v,to make (something bad or unsatisfactory) better,10
+anathema n,something or someone that is intensely disliked or loathed,10
+antipathy n,a deep-seated feeling of dislike/aversion,10
+apropos prep,with regard to/concerning,10
+arduous adj,involving or requiring strenuous effort/difficult and tiring,10
+assuage v,to make (an unpleasant feeling) less intense/relieve,10
+avaricious adj,having or showing an extreme greed for wealth or material gain,10
+bereft adj,deprived of or lacking something,especially a non-material asset,10
+cacophony n,a harsh,discordant mixture of sounds,10
+capitulate v,to cease to resist an opponent or an unwelcome demand/surrender,10
+caustic adj,sarcastic in a scathing and bitter way,10
+chicanery n,the use of trickery to achieve a political financial or legal purpose,10
+cogent adj,clear logical and convincing,10
+concomitant adj,naturally accompanying or associated,10
+confluence,n,the junction of two rivers/the action or process of merging,10
+confound,v,to cause surprise or confusion/to prove wrong,10
+connoisseur,n,an expert judge in matters of taste especially in the arts,10
+consecrate,v,to make or declare sacred/dedicate,10
+construe,v,to interpret or explain the meaning of something,10
+consummate,adj(v/adj),complete or perfect in the highest degree/(v) to make a marriage or relationship complete by having sexual intercourse,10
+contrite,adj,feeling or expressing remorse or penitence/affected by guilt,10
+contumacious,adj,disobedient /rebellious/stubbornly resistant to authority,10
+conundrum,n,a confusing and difficult problem or question,10
+copious,adj,abundant in supply or quantity/profuse,10
+corpulent,adj,fat/having a large bulky body,10
+corroborate,v,to confirm or give support to (a statement theory or finding),10
+credence,n,belief in or acceptance of something as true,10
+culpable,adj,deserving blame or censure/guilty,10
+curmudgeon,n,a bad-tempered or surly person especially an old one,10
+dearth,n,a scarcity or lack of something,10
+debilitate,v,to make (someone) very weak and infirm,10
+debunk,v,to expose the falseness or hollowness of (a myth or idea or belief),10
+decorum,n,behavior in keeping with good taste and propriety/etiquette,10
+deference,n,humble submission and respect,10
+defunct,adj,no longer existing or functioning,10
+deign,v,to do something that one considers to be beneath one's dignity/condescend,10
+delineate,v,to describe or portray (something) precisely,10
+demagogue,n,a political leader who seeks support by appealing to popular desires and prejudices rather than by using rational argument,10
+denigrate,v,to criticize unfairly/disparage,10
+deride,v,to express contemptuous ridicule or scorn/mock,10
+despondent,adj,in low spirits from loss of hope or courage,10
+diaphanous,adj,(especially of fabric) light or delicate and translucent,10
+dichotomy,n,a division or contrast between two things that are or are represented as being opposed or entirely different,10
+diffidence,n,modesty or shyness resulting from a lack of self-confidence,10
+dilatory,adj,tending to delay or procrastinate/slow to act,10
+disconcert,v,to disturb the composure of/unsettle,10
+discursive,adj,digressing from subject to subject,10
+dissemble,v,to conceal one's true motives or feelings or beliefs/disguise,10
+disseminate,v,to spread or disperse (something especially information) widely,10
+dissuade,v,to persuade (someone) not to take a particular course of action,10
+dither,v,to be indecisive/vacillate,10
+docile,adj,ready to accept control or instruction/submissive,10
+dogmatic,adj,inclined to lay down principles as incontrovertibly true,10
+dormant,adj,having normal physical functions suspended or slowed down for a period of time,10
+duplicity,n,deceitfulness/double-dealing,10
+ebullient,adj,cheerful and full of energy/enthusiastic,10
+eclectic,adj,deriving ideas/style or taste from a broad and diverse range of sources,10
+effervescent,adj,giving off bubbles/fizzy/vivacious and enthusiastic,10
+efficacious,adj,effective/producing the desired outcome,10
+effulgent,adj,shining brightly/radiant,10
+egregious,adj,outstandingly bad/shocking,10
+elegy,n,a poem of serious reflection typically a lament for the dead,10
+elicit,v,to evoke or draw out (a response or answer or fact) from someone,10
+elucidate,v,to make (something) clear/explain,10
+emanate,v,to issue or spread out from a source/to originate from,10
+eminent,adj,famous and respected within a particular sphere or profession,10
+empirical,adj,based on/concerned with or verifiable by observation or experience rather than theory or pure logic,10
+enervate,v,to cause someone to feel drained of energy or vitality/weaken,10
+enigmatic,adj,difficult to interpret or understand/mysterious,10
+ephemeral,adj,lasting for a very short time/transient,10
+equanimity,n,mental calmness/composure and evenness of temper especially in a difficult situation,10
+equivocate,v,to use ambiguous language so as to conceal the truth or avoid committing oneself,10
+esoteric,adj,intended for or likely to be understood by only a small number of people with special knowledge,10
+evanescent,adj,soon passing out of sight /memory or existence/quickly fading or disappearing,10
+exacerbate,v,to make (a problem/situation or feeling) worse/intensify,10
+exonerate,v,to absolve (someone) from blame for a fault or wrongdoing especially after due consideration of the case,10
+expedient,adj/n,(adj) convenient and practical/although possibly improper or immoral/(n) a means of attaining an end especially one that is convenient but considered improper or immoral,10
+expiate,v,atone for (guilt or sin),10
+extant,adj,still in existence/surviving,10
+extol,v,to praise enthusiastically,10
+facetious,adj,treating serious issues with deliberately inappropriate humor/flippant,10
+fastidious,adj,very attentive to and concerned about accuracy and detail/hard to please,10
+fathom,v,to understand (a difficult problem or an enigmatic person) after much thought,10
+fatuous,adj,silly and pointless/foolish,10
+fecund,adj,producing or capable of producing offspring/fruit/vegetation/etc/in abundance/prolific,10
+feral,adj,in a wild state especially after escape from captivity or domestication,10
+fervor,n,intense and passionate feeling,10
+flabbergasted,adj,extremely surprised or shocked,10
+flagrant,adj,(of something considered wrong or immoral) conspicuously or obviously offensive,10
+foible,n,a minor weakness or eccentricity in someone's character,10
+foment,v,to instigate or stir up (an undesirable or violent sentiment or course of action),10
+fortuitous,adj,happening by accident or chance rather than design,10
+frugal,adj,sparing or economical with regard to money or food,10
+fulminate,v,to express vehement protest,10
+furtive,adj,attempting to avoid notice or attention typically because of guilt or a belief that discovery would lead to trouble/secretive,10
+galvanize,v,to shock or excite (someone) typically into taking action,10
+garner,v,to gather or collect (something especially information or approval),10
+gratuitous,adj,uncalled for/lacking good reason/unwarranted,10
+gregarious,adj,(of a person) fond of company/sociable,10
+guile,n,sly or cunning intelligence,10
+hackneyed,adj,(of a phrase or idea) lacking significance through having been overused/unoriginal and trite,10
+harangue,n,a lengthy and aggressive speech,10
+hedonist,n,a person who believes that the pursuit of pleasure is the most important thing in life/a pleasure-seeker,10
+hegemony,n,leadership or dominance especially by one country or social group over others,10
+hermetic,adj,(of a seal or closure) complete and airtight/tightly controlled or enclosed,10
+hiatus,n,a pause or gap in a sequence /series or process,10
+iconoclast,n,a person who attacks or criticizes cherished beliefs or institutions,10
+idiosyncrasy,n,a mode of behavior or way of thought peculiar to an individual,10
+ignominious,adj,deserving or causing public disgrace or shame,10
+illicit,adj,forbidden by law/rules or custom,10
+imbue,v,inspire or permeate with a feeling or quality,10
+immutable,adj,unchanging over time/unalterable,10
+impede,v,delay or prevent (someone or something) by obstructing them/hinder,10
+imperious,adj,assuming power or authority without justification/arrogant and domineering,10
+impervious,adj,not allowing fluid to pass through/unable to be affected by,10
+implacable,adj,unable to be placated/relentless,10
+implicit,adj,implied though not plainly expressed,10
+incisive,adj,(of a person or mental process) intelligently analytical and clear-thinking,10

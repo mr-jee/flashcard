@@ -17,23 +17,9 @@ def is_duplicate(word):
     try:
         dataframe = pd.read_csv("data/english_words.csv")
     except FileNotFoundError:
-        word = word_entry.get().lower()
-        meaning = meaning_textbox.get("1.0", "end-1c").lower()
-        part_of_speech = part_of_speech_entry.get().lower()
-        remaining_guess = 10
-
-        word_dict = {
-            "word": word,
-            "meaning": meaning,
-            "part_of_speech": part_of_speech,
-            "remaining_guess": remaining_guess,
-        }
-
-        word_df = pd.DataFrame([word_dict])
+        word_df = pd.DataFrame(columns=["word", "meaning", "part_of_speech", "remaining_guess"])
         word_df.to_csv("data/english_words.csv", mode='a', index=False)
-        dataframe = pd.read_csv("data/english_words.csv")
-        print(dataframe)
-        return False, dataframe[dataframe.word == word]
+        return False, None
 
     else:
         # print(word in dataframe.word.values)
@@ -49,9 +35,9 @@ def remove_duplicate(index):
 
 
 def add_to_db():
-    word = word_entry.get().lower()
-    meaning = meaning_textbox.get("1.0", "end-1c").lower()
-    part_of_speech = part_of_speech_entry.get().lower()
+    word = word_entry.get().lower().replace(",", "/").strip()
+    meaning = meaning_textbox.get("1.0", "end-1c").lower().replace(",", "/").strip()
+    part_of_speech = part_of_speech_entry.get().lower().replace(",", "/").strip()
     remaining_guess = 10
 
     check_duplicate = is_duplicate(word)
@@ -71,6 +57,11 @@ def add_to_db():
     else:
         word_df = pd.DataFrame([word_dict])
         word_df.to_csv("data/english_words.csv", mode='a', header=False, index=False)
+        word_entry.delete(0, END)
+        meaning_textbox.delete("1.0", END)
+        part_of_speech_entry.delete(0, END)
+        messagebox.showinfo(title="SAVED SUCCESSFULLY!✅",
+                            message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
 
 
 # UI ------------------------------
@@ -78,6 +69,11 @@ window = Tk()
 window.title("FlashCard")
 window.minsize(width=450, height=610)
 window.config(padx=25, pady=25, bg=DARK_GREEN)
+
+# ------------Test
+df2 = pd.read_csv("data/english_words.csv")
+print(len(df2))
+# ------------/Test
 
 canvas = Canvas(width=400, height=266)
 word_card_img = PhotoImage(file="images/word_card.png")
@@ -114,7 +110,6 @@ meaning_label = Label(text="Meaning: ")
 meaning_label.config(bg=DARK_GREEN, fg="white", font=("Arial", 12, "bold"))
 meaning_label.grid(row=5, column=0)
 
-
 word_entry = Entry(width=32)
 word_entry.focus()
 word_entry.grid(row=3, column=1)
@@ -124,7 +119,6 @@ part_of_speech_entry.grid(row=4, column=1, pady=5)
 
 meaning_textbox = Text(height=4, width=24)
 meaning_textbox.grid(row=5, column=1, pady=10)
-
 
 add_btn = Button(text="Add to Dictionary ➡", width=36, fg=DARK_GREEN, bg=YELLOW, font=("Arial", 15), command=add_to_db)
 add_btn.grid(row=6, column=0, columnspan=2)
