@@ -9,6 +9,7 @@ DARK_GREEN = "#0b6940"
 LIGHT_GREEN = "#9ADE7B"
 current_card = {}
 
+
 # --------------------------Insert Section Functionality
 
 def is_duplicate(word):
@@ -69,7 +70,8 @@ def add_to_db():
                             message=f"Word: {word.title()}\nPart of speech: {part_of_speech.title()}\nMeaning: {meaning}")
 
 
-#----------------------FlashCard Section
+# ----------------------FlashCard Section-----------------------------------------------------------------
+# ----------------------FlashCard Section-----------------------------------------------------------------
 try:
     mydata = pd.read_csv("data/english_words.csv")
 except FileNotFoundError:
@@ -83,22 +85,22 @@ else:
     to_learn_dict_temp = main_data_dict
 
 
-
 def next_card():
     global current_card, flip_timer
     window.after_cancel(flip_timer)
     current_card = random.choice(to_learn_dict_temp)
-    canvas.itemconfig(card_part_of_speech, text="Do you know the meaning of:", fill='black', font=("Arial", 15, "italic"))
-    canvas.itemconfig(card_main_text, text=current_card['word'], fill='black', font=("Arial", 40, "bold"))
+    canvas.itemconfig(card_part_of_speech, text="Do you know the meaning of:", fill='black',
+                      font=("Arial", 15, "italic"))
+    canvas.itemconfig(card_main_text, text=current_card['word'].title(), fill='black', font=("Arial", 35, "bold"))
     canvas.itemconfig(card_current_background, image=front_of_card_img)
     flip_timer = window.after(3000, func=flip_card)
 
 
 def flip_card():
-    canvas.itemconfig(card_part_of_speech, text=f"POS: {current_card['part_of_speech']}", fill=YELLOW, font=("Arial", 18, "bold"))
+    canvas.itemconfig(card_part_of_speech, text=f"POS: {current_card['part_of_speech']}", fill=YELLOW,
+                      font=("Arial", 18, "bold"))
     canvas.itemconfig(card_main_text, text=current_card["meaning"], fill='white', font=("Arial", 15))
     canvas.itemconfig(card_current_background, image=back_of_card_img)
-
 
 
 def i_know():
@@ -113,18 +115,8 @@ def i_know():
     next_card()
 
 
-
-
-
-
-
-
-
-
-
-
-
-# UI ------------------------------
+# UI ----------------------------------------------------------------------
+# UI ----------------------------------------------------------------------
 window = Tk()
 window.title("FlashCard")
 window.minsize(width=450, height=610)
